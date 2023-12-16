@@ -6,7 +6,9 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
     <script src="./p5Util.js" defer></script>
     <script src="./script/Uni.js" defer></script>
+    <script src="./script/Uni_2.js" defer></script>
     <script src="./script/sketch.js" defer></script>
+    <script src="./script/sketch_2.js" defer></script>
     <title>IMD232 FINAL 최은진 202020378</title>
     <link
       href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
@@ -14,11 +16,19 @@
       type="text/css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
-    <main>
-      <div class="container">
-        <canvas id="mySketchGoesHere"></canvas>
-      </div>
-    </main>
+    <div class="viewport">
+      <header>
+        <div class="container"></div>
+      </header>
+      <main>
+        <div class="container">
+          <!-- <!— 첫 번째 스케치에 사용될 캔버스 —> -->
+          <canvas id="mySketchGoesHere"></canvas>
+          <canvas id="sketchGoesHere"></canvas>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

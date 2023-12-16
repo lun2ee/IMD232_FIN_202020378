@@ -1,4 +1,4 @@
-class Uni {
+class Uni_2 {
   constructor(azimuth, zenith, rad, beginRad) {
     //고개를 좌우로 하는 각 (방위각)
     this.azimuth = azimuth;
@@ -16,6 +16,9 @@ class Uni {
     this.beginRad = beginRad;
 
     this.wrapperRad = 300;
+
+    this.noiseOffsetX = 0;
+    this.noiseOffsetY = 0;
   }
 
   randomAcc() {

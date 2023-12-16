@@ -1,9 +1,9 @@
-const unis = [];
+const unis_2 = [];
 
 function setup() {
   createCanvas(800, 800);
-  var canvas = document.createElement('mySketchGoesHere');
-  canvas.id = 'mySketchGoesHere';
+  var canvas = document.createElement('sketchGoesHere');
+  canvas.id = 'sketchGoesHere';
 
   document.body.appendChild(canvas);
 
@@ -15,7 +15,7 @@ function setup() {
       //azimuth 값은 (TAU/16)* azimNum 으로 설정되고,
       //zenith 값은 (TAU/8)*zeniNum 으로 설정된다.
       //나머지 매개 변수는 고정된 값인 300 과 50이다.
-      unis.push(new Uni((TAU / 16) * azimNum, (TAU / 10) * zeniNum, 300, 20));
+      unis_2.push(new Uni((TAU / 16) * azimNum, (TAU / 10) * zeniNum, 300, 20));
     }
   }
 
@@ -30,12 +30,12 @@ function draw() {
 
   stroke('white');
   strokeWeight(1);
-  unis.forEach((eachUni) => {
+  unis_2.forEach((eachUni) => {
     eachUni.randomAcc();
     eachUni.update();
     eachUni.display();
   });
-  // console.log(unis[0]);
+  // console.log(unis_2[0]);
 }
 function windowResized() {
   // 윈도우 크기가 변경되면 캔버스 크기를 조절
@@ -45,7 +45,7 @@ function windowResized() {
   const scaleFixX = width / 800;
   const scaleFixY = height / 800;
 
-  unis.forEach((eachUni) => {
+  unis_2.forEach((eachUni) => {
     eachUni.updateWrapperRad(scaleFixX, scaleFixY);
   });
 }
