@@ -1,18 +1,15 @@
 class Uni {
   constructor(azimuth, zenith, rad, beginRad) {
-    //고개를 좌우로 하는 각 (방위각)
     this.azimuth = azimuth;
     this.azimVel = 0;
     this.azimAcc;
 
-    //고개를 위아래로 하는 각 (경사각)
     this.zenith = zenith;
     this.zeniVel = 0;
     this.zeniAcc;
 
-    //반지름 (끝점)
     this.rad = rad;
-    //시작점 반지름
+
     this.beginRad = beginRad;
 
     this.wrapperRad = 300;
@@ -37,16 +34,13 @@ class Uni {
     const endPoint = this.polarToCartesian(this.rad);
     const beginPoint = this.polarToCartesian(this.beginRad);
 
-    // 원을 감싸는 선 그리기
     stroke('white');
     noFill();
     ellipse(0, 0, this.wrapperRad * 2);
 
-    // 마우스 위치
     const mouseXInUniFrame = mouseX - width / 2;
     const mouseYInUniFrame = mouseY - height / 2;
 
-    // 마우스와의 거리
     const distanceToMouse = dist(
       beginPoint.x,
       beginPoint.y,
@@ -54,9 +48,7 @@ class Uni {
       mouseYInUniFrame
     );
 
-    // 만약 마우스가 Uni 바깥쪽의 원 안에 들어오면 endpoint를 마우스 위치로 몰리도록 함
     if (distanceToMouse < this.wrapperRad) {
-      //같은 분면에 위치한 endpoint 개수 제한
       endPoint.x = mouseXInUniFrame;
       endPoint.y = mouseYInUniFrame;
     }

@@ -34,9 +34,7 @@ function draw() {
     eachUni.update();
     eachUni.display();
   });
-  // console.log(unis[0]);
 }
 function windowResized() {
-  // 윈도우 크기가 변경되면 캔버스 크기를 조절
   resizeCanvas(windowWidth, windowHeight);
 }
