@@ -1,3 +1,5 @@
+//By 손우성 교수님과 함께 하는 행복 코딩_1:1미팅
+//chat GPT 와의 합작
 const unis = [];
 
 function setup() {
